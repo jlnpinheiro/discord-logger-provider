@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.Testing.Platform.Logging;
 using Moq;
 using System.Security.Claims;
 
@@ -11,7 +12,7 @@ public class DiscordLoggerTests
 {
     protected ServiceProvider _serviceProvider;
     protected IServiceCollection _serviceCollection;
-    protected ILogger<DiscordLoggerTests> _logger;
+    protected Microsoft.Extensions.Logging.ILogger<DiscordLoggerTests> _logger;
 
     [SetUp]
     public void SetupTest()
@@ -41,12 +42,12 @@ public class DiscordLoggerTests
                     config.HttpContextAccessor = mockHttpContextAccessor.Object;
                     config.UserClaimValueToDiscordFields = [new(ClaimTypes.NameIdentifier, "Name identifier"), new(ClaimTypes.Name, "Name")];
                 });
-                c.SetMinimumLevel(LogLevel.Trace);
+                c.SetMinimumLevel(Microsoft.Extensions.Logging.LogLevel.Trace);
             });
 
         var _serviceProvider = _serviceCollection.BuildServiceProvider();
 
-        _logger = _serviceProvider.GetRequiredService<ILogger<DiscordLoggerTests>>();
+        _logger = _serviceProvider.GetRequiredService<Microsoft.Extensions.Logging.ILogger<DiscordLoggerTests>>();
     }
 
     [Test]
@@ -111,7 +112,7 @@ public class DiscordLoggerTests
             ex.Data["Extra info 1"] = "Extra info 1 value"; // Custom exception info sample.
             ex.Data["Extra info 2"] = "Extra info 2 value";
 
-            _logger.LogError(ex, "A exception is handled!");
+            _logger.LogError("A exception is handled!");
 
             Assert.Pass();
         }

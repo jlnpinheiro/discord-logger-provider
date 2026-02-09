@@ -28,7 +28,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\logger-discord-provider\logger-discord-provider.csproj" />
+	  <ProjectReference Include="..\discord-logger-provider\discord-logger-provider.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

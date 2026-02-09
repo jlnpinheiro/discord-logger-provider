@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36109.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "logger-discord-provider", "logger-discord-provider\logger-discord-provider.csproj", "{F1997533-5BE8-42C2-9668-08F5087751C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "discord-logger-provider", "discord-logger-provider\discord-logger-provider.csproj", "{F1997533-5BE8-42C2-9668-08F5087751C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "logger-discord-provider-tests", "logger-discord-provider-test\logger-discord-provider-test.csproj", "{90A35AF8-54E6-4092-A968-BC0AFDEA5797}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "discord-logger-provider-tests", "discord-logger-provider-test\discord-logger-provider-test.csproj", "{90A35AF8-54E6-4092-A968-BC0AFDEA5797}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

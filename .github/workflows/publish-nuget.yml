@@ -26,13 +26,13 @@ jobs:
 
       - name: Write Discord webhook URL on testSettings.json file
         run: |
-          echo "{\"DiscordWebhookUrl\": \"${{ vars.DISCORD_WEBHOOK_URL }}\"}" > logger-discord-provider-test/bin/Release/net8.0/testSettings.json
+          echo "{\"DiscordWebhookUrl\": \"${{ vars.DISCORD_WEBHOOK_URL }}\"}" > discord-logger-provider-test/bin/Release/net8.0/testSettings.json
 
       - name: Run Tests
-        run: dotnet test logger-discord-provider-test/logger-discord-provider-test.csproj --configuration Release --no-build --verbosity normal
+        run: dotnet test discord-logger-provider-test/discord-logger-provider-test.csproj --configuration Release --no-build --verbosity normal
 
       - name: Pack
-        run: dotnet pack logger-discord-provider/logger-discord-provider.csproj --configuration Release --no-build -o ./nupkg /p:PackageVersion=${{ github.ref_name }}
+        run: dotnet pack discord-logger-provider/discord-logger-provider.csproj --configuration Release --no-build -o ./nupkg /p:PackageVersion=${{ github.ref_name }}
 
       - name: Publish to NuGet
         run: dotnet nuget push "./nupkg/*.nupkg" --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json

@@ -15,17 +15,17 @@ For more information about suported versions visit https://docs.microsoft.com/pt
 
 ### NuGet
 ```
-Install-Package logger-discord-provider
+Install-Package discord-logger-provider
 ```
 ### .NET CLI
 ```
-dotnet add package logger-discord-provider
+dotnet add package discord-logger-provider
 ```
 ## Configuration
 This sample code shows how to add Discord Logger Provider on a .NET project:
 
 ```csharp
-using JNogueira.Logger.Discord;
+using JNogueira.Discord.Logger;
 
 var myDiscordWebhookUrl = "https://discord.com/api/webhooks/...";
 
