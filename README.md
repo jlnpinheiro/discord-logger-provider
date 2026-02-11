@@ -1,5 +1,5 @@
 # Discord .NET Logger Provider
-[![NuGet](https://img.shields.io/nuget/dt/logger-discord-provider.svg?style=flat-square)](https://www.nuget.org/packages/logger-discord-provider) [![NuGet](https://img.shields.io/nuget/v/logger-discord-provider.svg?style=flat-square)](https://www.nuget.org/packages/logger-discord-provider)
+[![NuGet](https://img.shields.io/nuget/dt/discord-logger-provider.svg?style=flat-square)](https://www.nuget.org/packages/discord-logger-provider) [![NuGet](https://img.shields.io/nuget/v/discord-logger-provider.svg?style=flat-square)](https://www.nuget.org/packages/discord-logger-provider)
 
 A .NET logger provider to send log entries to **Discord** (https://discordapp.com/) as message in a channel. 
 
@@ -80,37 +80,37 @@ namespace My.Sample.Code
 ```csharp
 _logger.LogTrace("My trace message is here!");
 ```
-![Trace message](https://raw.githubusercontent.com/jlnpinheiro/logger-discord-provider/refs/heads/assets/trace.png?raw=true)
+![Trace message](https://raw.githubusercontent.com/jlnpinheiro/discord-logger-provider/refs/heads/assets/trace.png?raw=true)
 
 **Debug**
 ```csharp
 _logger.LogDebug("My debug message is here!");
 ```
-![Debug message](https://raw.githubusercontent.com/jlnpinheiro/logger-discord-provider/refs/heads/assets/debug.png?raw=true)
+![Debug message](https://raw.githubusercontent.com/jlnpinheiro/discord-logger-provider/refs/heads/assets/debug.png?raw=true)
 
 **Information**
 ```csharp
 _logger.LogInformation("My information message is here!");
 ```
-![Debug message](https://raw.githubusercontent.com/jlnpinheiro/logger-discord-provider/refs/heads/assets/information.png?raw=true)
+![Debug message](https://raw.githubusercontent.com/jlnpinheiro/discord-logger-provider/refs/heads/assets/information.png?raw=true)
 
 **Warning**
 ```csharp
 _logger.LogWarning("My warning message is here!");
 ```
-![Warning message](https://raw.githubusercontent.com/jlnpinheiro/logger-discord-provider/refs/heads/assets/warning.png?raw=true)
+![Warning message](https://raw.githubusercontent.com/jlnpinheiro/discord-logger-provider/refs/heads/assets/warning.png?raw=true)
 
 **Error**
 ```csharp
  _logger.LogError("My error message is here!");
 ```
-![Error message](https://raw.githubusercontent.com/jlnpinheiro/logger-discord-provider/refs/heads/assets/error.png?raw=true)
+![Error message](https://raw.githubusercontent.com/jlnpinheiro/discord-logger-provider/refs/heads/assets/error.png?raw=true)
 
 **Critical**
 ```csharp
  _logger.LogCritical("My critical message is here!");
 ```
-![Error message](https://raw.githubusercontent.com/jlnpinheiro/logger-discord-provider/refs/heads/assets/critical.png?raw=true)
+![Error message](https://raw.githubusercontent.com/jlnpinheiro/discord-logger-provider/refs/heads/assets/critical.png?raw=true)
 
 **Handle an exception!**<br/>
 The attachment file *"exception-details.txt"* contains more exception details like base exception, stack trace content, exception type, exception extra data information.
